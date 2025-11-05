@@ -2,7 +2,7 @@
   "name": "my-portfolio",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://dasundarshaka.github.io/myport",
+  "homepage": "https://dasundarshaka.github.io/myportfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
