@@ -100,13 +100,13 @@ export default function Portfolio() {
           className="text-2xl font-light hover:text-blue-300 transition-colors duration-300 cursor-default"
           whileHover={{ scale: 1.05 }}
         >
-          Undergraduate Software Engineer
+          Software Engineer
         </motion.p>
         <motion.p 
           className="text-lg mt-2 hover:text-gray-300 transition-colors duration-300 cursor-default"
           whileHover={{ scale: 1.05 }}
         >
-          BIT (Reading) | BSc in Physical Sciences (Reading)
+          BIT (Reading) | BSc in Physical Sciences
         </motion.p>
       </motion.header>
 
@@ -194,9 +194,9 @@ export default function Portfolio() {
           <div className="grid md:grid-cols-2 gap-10">
             {[
               {
-                title: "Smart Budget Managing Web Application",
-                tech: "React.js, Express.js, MongoDB, Node.js",
-                desc: "Built a full-stack MERN Expense Tracker Web using OOP and DSA (sorting, hash maps) for efficient expense categorization and analytics, with REST APIs and a React dashboard.",
+                title: "Lost and Found Items Management System for University",
+                tech: "C#, PHP, MySQL",
+                desc: "Developed a web application for managing lost and found items at the university, featuring user authentication, item listings, and a search function.",
               },
               {
                 title: "Study Time Periods Optimizing Web Application",
@@ -209,9 +209,9 @@ export default function Portfolio() {
                 desc: "Developed a full-stack mobile app that recommends personalized leisure activities based on time, budget and preferences featuring algorithms and interactive UI.",
               },
               {
-                title: "Book Shop Website",
-                tech: "HTML, CSS, JavaScript",
-                desc: "Developed a website for a bookshop that implemented responsive design, interactive UI elements, and seamless user navigation.",
+                title: "Smart Budget Managing Web Application",
+                tech: "React.js, Express.js, MongoDB, Node.js",
+                desc: "Built a full-stack MERN Expense Tracker Web using OOP and DSA (sorting, hash maps) for efficient expense categorization and analytics, with REST APIs and a React dashboard.",
               },
             ].map((proj, i) => (
               <motion.div 
