@@ -44,7 +44,7 @@ export default function Portfolio() {
     {
       role: "Odoo Software Engineer Intern",
       company: "Beaver Hub (Pvt) Ltd",
-      period: "Internship",
+      period: "Jan 2026 - July",
       points: [
         "Contributed to Sewdoo, the company's proprietary Odoo ERP product built for the apparel manufacturing industry, developing custom features tailored to industry-specific workflows.",
         "Developed and enhanced features for an Odoo-based ERP solution serving the hotel industry, translating hospitality operations into functional technical modules.",
@@ -258,6 +258,21 @@ export default function Portfolio() {
           <div className="grid md:grid-cols-2 gap-10">
             {[
               {
+                title: "Library Management System – Custom Odoo Module",
+                tech: "Odoo, Python, OWL, PostgreSQL, XML, Chart.js, XlsxWriter",
+                desc: "Built a production-ready Library Management System from scratch as a custom Odoo addon — automating the full lending lifecycle from cataloging to fines. Features an interactive OWL dashboard with live borrow-trend analytics, an automated fine engine with borrowing-limit enforcement, a member self-service portal with smart due-date reminders, and one-click Excel/PDF reporting — all backed by role-based security and full audit trails.",
+              },
+              {
+                title: "Purchase Internal Request – Custom Odoo 19 Module",
+                tech: "Odoo, Python, PostgreSQL, OWL, QWeb Reports, XML ",
+                desc: "Built an end-to-end internal purchase requisition system for Odoo 19, letting employees raise requests — even for generic, non-catalog items — that flow through a configurable multi-level approval hierarchy. Automatically checks stock availability at approval time, generating Internal Transfers for in-stock items and one-click RFQs/POs for the rest, with an event-driven state machine tracking the full Draft → Received lifecycle. Cleanly extends Odoo's hr, stock, and purchase apps via inheritance — zero core overrides, fully uninstallable.",
+              },
+              {
+                title: "Fuel Management System – Custom Odoo 19 Module",
+                tech: "Odoo 19, Python, Odoo ORM, XML Views, PostgreSQL",
+                desc: "Built a custom Odoo 19 application from scratch to track and control vehicle fuel consumption in real time. Features a vehicle registry with type-based classification, configurable weekly fuel limits per vehicle type, and auto-computed used/remaining fuel fields driven live by transaction data. Enforces business rules that block a vehicle from logging fuel once it hits its weekly limit — stopping overuse before it happens — backed by full audit trails and role-based security (Fuel Admin/User).",
+              },
+              {
                 title: "Lost and Found Items Management System for University",
                 tech: "C#, PHP, MySQL",
                 desc: "Developed a web application for managing lost and found items at the university, featuring user authentication, item listings, and a search function.",
@@ -273,6 +288,7 @@ export default function Portfolio() {
                 tech: "React.js, Express.js, MongoDB, Node.js",
                 desc: "Built a full-stack MERN Expense Tracker Web using OOP and DSA (sorting, hash maps) for efficient expense categorization and analytics, with REST APIs and a React dashboard.",
               },
+              
             ].map((proj, i) => (
               <motion.div 
                 key={i} 
@@ -323,7 +339,7 @@ export default function Portfolio() {
                 <Code size={32} className="text-blue-400 mb-3 hover:text-blue-300 transition-colors" />
               </motion.div>
               <h3 className="text-2xl font-semibold text-white mb-2 hover:text-blue-400 transition-colors duration-300">Programming Languages</h3>
-              <p className="text-gray-300 hover:text-white transition-colors duration-300">Python, Java, JavaScript, PHP, HTML, CSS, C#, R</p>
+              <p className="text-gray-300 hover:text-white transition-colors duration-300">Python, Java, JavaScript, PHP, HTML, XML, CSS, C#, R</p>
             </motion.div>
 
             <motion.div 
@@ -336,7 +352,7 @@ export default function Portfolio() {
                 <Cpu size={32} className="text-green-400 mb-3 hover:text-green-300 transition-colors" />
               </motion.div>
               <h3 className="text-2xl font-semibold text-white mb-2 hover:text-green-400 transition-colors duration-300">Frameworks & ERP</h3>
-              <p className="text-gray-300 hover:text-white transition-colors duration-300">Odoo ERP, Odoo ORM, React, Node.js</p>
+              <p className="text-gray-300 hover:text-white transition-colors duration-300">Odoo ERP, OWL, React, Node.js</p>
             </motion.div>
 
             <motion.div 
@@ -349,7 +365,7 @@ export default function Portfolio() {
                 <Database size={32} className="text-yellow-400 mb-3 hover:text-yellow-300 transition-colors" />
               </motion.div>
               <h3 className="text-2xl font-semibold text-white mb-2 hover:text-yellow-400 transition-colors duration-300">Databases</h3>
-              <p className="text-gray-300 hover:text-white transition-colors duration-300">PostgreSQL, MySQL, MongoDB</p>
+              <p className="text-gray-300 hover:text-white transition-colors duration-300">MySQL, PostgreSQL, MongoDB</p>
             </motion.div>
 
             <motion.div 
@@ -362,7 +378,7 @@ export default function Portfolio() {
                 <GitBranch size={32} className="text-purple-400 mb-3 hover:text-purple-300 transition-colors" />
               </motion.div>
               <h3 className="text-2xl font-semibold text-white mb-2 hover:text-purple-400 transition-colors duration-300">Tools & Platforms</h3>
-              <p className="text-gray-300 hover:text-white transition-colors duration-300">Git, GitHub, XML, REST APIs</p>
+              <p className="text-gray-300 hover:text-white transition-colors duration-300">Git, GitHub, REST APIs</p>
             </motion.div>
           </div>
         </motion.section>
