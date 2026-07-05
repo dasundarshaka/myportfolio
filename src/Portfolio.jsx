@@ -386,7 +386,7 @@ export default function Portfolio() {
                 <Cpu size={32} className="text-green-400 mb-3 hover:text-green-300 transition-colors" />
               </motion.div>
               <h3 className="text-2xl font-semibold text-white mb-2 hover:text-green-400 transition-colors duration-300">Frameworks & ERP</h3>
-              <p className="text-gray-300 hover:text-white transition-colors duration-300">Odoo ERP, OWL, React, Node.js</p>
+              <p className="text-gray-300 hover:text-white transition-colors duration-300">Odoo ERP, OWL, React, Node.js, Flask, FastApi</p>
             </motion.div>
 
             <motion.div
