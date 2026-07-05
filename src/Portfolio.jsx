@@ -1,5 +1,5 @@
 import { Card, CardContent } from "./components/ui/Card";
-import { Mail, Phone, MapPin, Linkedin, Github, Code, Database, Cpu, GitBranch, Lightbulb, Award, GraduationCap } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Github, Code, Database, Cpu, GitBranch, Lightbulb, Award, GraduationCap, Briefcase, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
 
 const fadeInUp = {
@@ -32,11 +32,30 @@ export default function Portfolio() {
   const sections = [
     { id: "about", label: "About" },
     { id: "education", label: "Education" },
+    { id: "experience", label: "Experience" },
     { id: "projects", label: "Projects" },
     { id: "skills", label: "Skills" },
     { id: "strengths", label: "Strengths" },
     { id: "certifications", label: "Certifications" },
     { id: "contact", label: "Contact" },
+  ];
+
+  const experience = [
+    {
+      role: "Odoo Software Engineer Intern",
+      company: "Beaver Hub (Pvt) Ltd",
+      period: "Internship",
+      points: [
+        "Contributed to Sewdoo, the company's proprietary Odoo ERP product built for the apparel manufacturing industry, developing custom features tailored to industry-specific workflows.",
+        "Developed and enhanced features for an Odoo-based ERP solution serving the hotel industry, translating hospitality operations into functional technical modules.",
+        "Designed and built a custom Odoo module for a Library Management System end-to-end, covering functional design, backend logic, and ORM-based data modeling.",
+        "Engineered custom Odoo modules using Python, PostgreSQL, XML, and the Odoo ORM, extending core ERP functionality to meet business-specific requirements.",
+        "Integrated external systems via APIs, enabling seamless data exchange between Odoo and third-party applications.",
+        "Conducted business process analysis and workflow automation, translating client requirements into scalable ERP solutions.",
+        "Built strong functional and technical expertise across Odoo core modules (Sales, Purchase, Inventory, Manufacturing), supporting end-to-end ERP implementation.",
+        "Supported development of a client-facing Odoo demo environment for a new industry vertical, collaborating with senior developers through design, development, and testing.",
+      ],
+    },
   ];
 
   const scrollToSection = (id) => {
@@ -106,7 +125,7 @@ export default function Portfolio() {
           className="text-lg mt-2 hover:text-gray-300 transition-colors duration-300 cursor-default"
           whileHover={{ scale: 1.05 }}
         >
-          BIT (Reading) | BSc in Physical Sciences
+          BSc in Physical Sciences(Computer Science & Statistics) | BIT (Reading)  
         </motion.p>
       </motion.header>
 
@@ -129,9 +148,9 @@ export default function Portfolio() {
           </motion.h2>
           <p className="text-lg leading-relaxed text-gray-300 hover:text-white transition-colors duration-300">
             Analytical and technically skilled graduate in Computer Science, Statistics and Industrial
-            Mathematics. Seeking a role that leverages my analytical thinking,
-            critical thinking, problem-solving, creativity and computational skills to drive innovative
-            solutions in tech, research or industry.
+            Mathematics, with hands-on experience building custom Odoo ERP solutions and other full stack projects.
+            Seeking a role that leverages my analytical thinking, critical thinking, problem-solving,
+            creativity and computational skills to drive innovative solutions in tech, research or industry.
           </p>
         </motion.section>
 
@@ -152,8 +171,8 @@ export default function Portfolio() {
           </motion.h2>
           <div className="grid md:grid-cols-2 gap-8">
             {[
+              { title: "BSc (General) in Physical Sciences(Computer Science & Statistics)", period: "2022 - 2025", place: "University of Ruhuna" },
               { title: "Bachelor of Information Technology", period: "2024 - Present", place: "University of Moratuwa" },
-              { title: "BSc (General) in Physical Sciences", period: "2022 - Present", place: "University of Ruhuna" },
               { title: "G.C.E. A/L – Physical Science Stream", period: "2020", place: "Royal College, Colombo 07" },
             ].map((edu, i) => (
               <motion.div 
@@ -171,6 +190,51 @@ export default function Portfolio() {
                 </div>
                 <p className="text-gray-400 hover:text-gray-300 transition-colors duration-300">{edu.period}</p>
                 <p className="text-gray-300 hover:text-white transition-colors duration-300">{edu.place}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
+
+        {/* Experience with hover effects */}
+        <motion.section
+          id="experience"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+          className="bg-gradient-to-r from-gray-900 to-gray-800 shadow-2xl rounded-2xl p-12 min-h-[90vh] flex flex-col justify-center border border-gray-700 hover:border-blue-500 transition-all duration-500"
+        >
+          <motion.h2 
+            className="text-4xl font-bold text-white mb-12 text-center hover:text-blue-400 transition-colors duration-300"
+            whileHover={{ scale: 1.1 }}
+          >
+            Experience
+          </motion.h2>
+          <div className="space-y-8">
+            {experience.map((exp, i) => (
+              <motion.div
+                key={i}
+                variants={fadeInUp}
+                custom={i + 1}
+                whileHover={{ scale: 1.02 }}
+                className="bg-gray-800 p-8 rounded-xl shadow-md hover:shadow-2xl hover:shadow-blue-500/40 transition-all duration-300 border border-transparent hover:border-blue-500"
+              >
+                <div className="flex flex-wrap items-center gap-3 mb-2">
+                  <motion.div whileHover={{ rotate: 360 }} transition={{ duration: 0.5 }}>
+                    <Briefcase className="text-blue-400 hover:text-blue-300 transition-colors" size={28} />
+                  </motion.div>
+                  <h3 className="text-2xl font-semibold text-white hover:text-blue-400 transition-colors duration-300">{exp.role}</h3>
+                </div>
+                <p className="text-blue-300 font-medium mb-1">{exp.company}</p>
+                <p className="text-gray-400 mb-6">{exp.period}</p>
+                <ul className="space-y-3">
+                  {exp.points.map((point, j) => (
+                    <li key={j} className="flex items-start gap-3 text-gray-300 hover:text-white transition-colors duration-300">
+                      <CheckCircle2 className="text-blue-400 shrink-0 mt-1" size={18} />
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
             ))}
           </div>
@@ -203,11 +267,7 @@ export default function Portfolio() {
                 tech: "Java, Spring Boot, React.js, Node.js",
                 desc: "Developed a full-stack web application for optimizing and allocating study time periods across university subjects using the Simplex Method in Mathematics, enabling effective scheduling during study leave.",
               },
-              {
-                title: "Leisure Activity Recommending Mobile Application",
-                tech: "React Native, Spring Boot, MySQL",
-                desc: "Developed a full-stack mobile app that recommends personalized leisure activities based on time, budget and preferences featuring algorithms and interactive UI.",
-              },
+      
               {
                 title: "Smart Budget Managing Web Application",
                 tech: "React.js, Express.js, MongoDB, Node.js",
@@ -263,7 +323,7 @@ export default function Portfolio() {
                 <Code size={32} className="text-blue-400 mb-3 hover:text-blue-300 transition-colors" />
               </motion.div>
               <h3 className="text-2xl font-semibold text-white mb-2 hover:text-blue-400 transition-colors duration-300">Programming Languages</h3>
-              <p className="text-gray-300 hover:text-white transition-colors duration-300">Java, JavaScript, Python, PHP, HTML, CSS, C#, R</p>
+              <p className="text-gray-300 hover:text-white transition-colors duration-300">Python, Java, JavaScript, PHP, HTML, CSS, C#, R</p>
             </motion.div>
 
             <motion.div 
@@ -275,8 +335,8 @@ export default function Portfolio() {
               <motion.div whileHover={{ rotate: 360, scale: 1.2 }} transition={{ duration: 0.5 }}>
                 <Cpu size={32} className="text-green-400 mb-3 hover:text-green-300 transition-colors" />
               </motion.div>
-              <h3 className="text-2xl font-semibold text-white mb-2 hover:text-green-400 transition-colors duration-300">Frameworks</h3>
-              <p className="text-gray-300 hover:text-white transition-colors duration-300">React, Node.js</p>
+              <h3 className="text-2xl font-semibold text-white mb-2 hover:text-green-400 transition-colors duration-300">Frameworks & ERP</h3>
+              <p className="text-gray-300 hover:text-white transition-colors duration-300">Odoo ERP, Odoo ORM, React, Node.js</p>
             </motion.div>
 
             <motion.div 
@@ -289,7 +349,7 @@ export default function Portfolio() {
                 <Database size={32} className="text-yellow-400 mb-3 hover:text-yellow-300 transition-colors" />
               </motion.div>
               <h3 className="text-2xl font-semibold text-white mb-2 hover:text-yellow-400 transition-colors duration-300">Databases</h3>
-              <p className="text-gray-300 hover:text-white transition-colors duration-300">MySQL, MongoDB</p>
+              <p className="text-gray-300 hover:text-white transition-colors duration-300">PostgreSQL, MySQL, MongoDB</p>
             </motion.div>
 
             <motion.div 
@@ -302,7 +362,7 @@ export default function Portfolio() {
                 <GitBranch size={32} className="text-purple-400 mb-3 hover:text-purple-300 transition-colors" />
               </motion.div>
               <h3 className="text-2xl font-semibold text-white mb-2 hover:text-purple-400 transition-colors duration-300">Tools & Platforms</h3>
-              <p className="text-gray-300 hover:text-white transition-colors duration-300">Git, GitHub</p>
+              <p className="text-gray-300 hover:text-white transition-colors duration-300">Git, GitHub, XML, REST APIs</p>
             </motion.div>
           </div>
         </motion.section>
