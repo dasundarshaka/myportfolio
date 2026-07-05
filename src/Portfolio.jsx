@@ -41,37 +41,38 @@ export default function Portfolio() {
   ];
 
   const experience = [
-  {
-    role: "Odoo Software Engineer Intern",
-    company: "Beaver Hub (Pvt) Ltd",
-    period: "Jan 2026 - July",
-    points: [
-      "Contributed to Sewdoo, the company's proprietary Odoo ERP product built for the apparel manufacturing industry, developing custom features tailored to industry-specific workflows.",
-      "Developed and enhanced features for an Odoo-based ERP solution serving the hotel industry, translating hospitality operations into functional technical modules.",
-      "Designed and built a custom Odoo module for a Library Management System end-to-end, covering functional design, backend logic, and ORM-based data modeling.",
-      "Engineered custom Odoo modules using Python, PostgreSQL, XML, and the Odoo ORM, extending core ERP functionality to meet business-specific requirements.",
-      "Integrated external systems via APIs, enabling seamless data exchange between Odoo and third-party applications.",
-      "Conducted business process analysis and workflow automation, translating client requirements into scalable ERP solutions.",
-      "Built strong functional and technical expertise across Odoo core modules (Sales, Purchase, Inventory, Manufacturing), supporting end-to-end ERP implementation.",
-      "Supported development of a client-facing Odoo demo environment for a new industry vertical, collaborating with senior developers through design, development, and testing.",
-    ],
-  },
-  {
-    role: "Data Science Intern",
-    company: "Gamage Recruiters Pvt Ltd, Sri Lanka",
-    period: "Dec 2025 - June 2026",
-    points: [
-      "Built and deployed a production-grade real-time AI prediction platform with an automated MLOps pipeline, covering drift-triggered auto-retraining, model versioning, and CI/CD-driven deployment.",
-      "Engineered and trained machine learning classification models (Logistic Regression, Decision Tree) with SMOTE-based class balancing, achieving 82% accuracy for predictive lead scoring.",
-      "Applied NLP techniques (TF-IDF vectorization, cosine similarity, text preprocessing) to build automated candidate-to-job matching and ranking systems.",
-      "Designed and implemented a composite scoring algorithm combining multiple weighted business metrics to automate lead/candidate prioritization.",
-      "Automated multi-stage business workflows (candidate screening, scheduling, status updates, and communications), reducing manual processing time by over 70% in real-world use cases.",
-      "Integrated third-party APIs (Google Calendar, email/SMTP services) to enable end-to-end process automation beyond core ML logic.",
-      "Built interactive dashboards (Streamlit) and full-stack web applications (Flask) to deliver real-time predictions, analytics, and reporting to end users.",
-      "Containerized and monitored ML systems using Docker, Prometheus, and Grafana, applying MLOps best practices for production reliability.",
-    ],
-  },
-];
+    {
+      role: "Odoo Software Engineer Intern",
+      company: "Beaver Hub (Pvt) Ltd",
+      period: "Jan 2026 - July",
+      points: [
+        "Contributed to Sewdoo, the company's proprietary Odoo ERP product built for the apparel manufacturing industry, developing custom features tailored to industry-specific workflows.",
+        "Developed and enhanced features for an Odoo-based ERP solution serving the hotel industry, translating hospitality operations into functional technical modules.",
+        "Designed and built a custom Odoo module for a Library Management System end-to-end, covering functional design, backend logic, and ORM-based data modeling.",
+        "Engineered custom Odoo modules using Python, PostgreSQL, XML, and the Odoo ORM, extending core ERP functionality to meet business-specific requirements.",
+        "Integrated external systems via APIs, enabling seamless data exchange between Odoo and third-party applications.",
+        "Conducted business process analysis and workflow automation, translating client requirements into scalable ERP solutions.",
+        "Built strong functional and technical expertise across Odoo core modules (Sales, Purchase, Inventory, Manufacturing), supporting end-to-end ERP implementation.",
+        "Supported development of a client-facing Odoo demo environment for a new industry vertical, collaborating with senior developers through design, development, and testing.",
+      ],
+    },
+    {
+      role: "Data Science Intern",
+      company: "Gamage Recruiters Pvt Ltd, Sri Lanka",
+      period: "Dec 2025 - June 2026",
+      points: [
+        "Built and deployed a production-grade real-time AI prediction platform with an automated MLOps pipeline, covering drift-triggered auto-retraining, model versioning, and CI/CD-driven deployment.",
+        "Engineered and trained machine learning classification models (Logistic Regression, Decision Tree) with SMOTE-based class balancing, achieving 82% accuracy for predictive lead scoring.",
+        "Applied NLP techniques (TF-IDF vectorization, cosine similarity, text preprocessing) to build automated candidate-to-job matching and ranking systems.",
+        "Designed and implemented a composite scoring algorithm combining multiple weighted business metrics to automate lead/candidate prioritization.",
+        "Automated multi-stage business workflows (candidate screening, scheduling, status updates, and communications), reducing manual processing time by over 70% in real-world use cases.",
+        "Integrated third-party APIs (Google Calendar, email/SMTP services) to enable end-to-end process automation beyond core ML logic.",
+        "Built interactive dashboards (Streamlit) and full-stack web applications (Flask) to deliver real-time predictions, analytics, and reporting to end users.",
+        "Containerized and monitored ML systems using Docker, Prometheus, and Grafana, applying MLOps best practices for production reliability.",
+      ],
+    },
+  ];
+
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -85,7 +86,7 @@ export default function Portfolio() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-80 backdrop-blur-md shadow-md transition-all duration-300 hover:bg-opacity-90">
         <ul className="flex justify-center flex-wrap gap-6 py-4 text-gray-200 font-semibold text-sm sm:text-base">
           {sections.map((section) => (
-            <motion.li 
+            <motion.li
               key={section.id}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
@@ -119,9 +120,9 @@ export default function Portfolio() {
           animate="visible"
         >
           {title.split("").map((char, i) => (
-            <motion.span 
-              key={i} 
-              variants={letterAnimation} 
+            <motion.span
+              key={i}
+              variants={letterAnimation}
               className="inline-block hover:text-blue-400 hover:scale-125 transition-all duration-200 cursor-default"
               whileHover={{ y: -10 }}
             >
@@ -129,17 +130,17 @@ export default function Portfolio() {
             </motion.span>
           ))}
         </motion.h1>
-        <motion.p 
+        <motion.p
           className="text-2xl font-light hover:text-blue-300 transition-colors duration-300 cursor-default"
           whileHover={{ scale: 1.05 }}
         >
           Software Engineer
         </motion.p>
-        <motion.p 
+        <motion.p
           className="text-lg mt-2 hover:text-gray-300 transition-colors duration-300 cursor-default"
           whileHover={{ scale: 1.05 }}
         >
-          BSc in Physical Sciences(Computer Science & Statistics) | BIT (Reading)  
+          BSc in Physical Sciences (Computer Science & Statistics) | BIT (Reading)
         </motion.p>
       </motion.header>
 
@@ -154,7 +155,7 @@ export default function Portfolio() {
           whileHover={{ scale: 1.02, boxShadow: "0 25px 50px -12px rgba(59, 130, 246, 0.3)" }}
           className="bg-gray-900 shadow-xl rounded-2xl p-10 border-l-8 border-gray-700 hover:border-blue-500 min-h-[90vh] flex flex-col justify-center transition-all duration-500 cursor-pointer"
         >
-          <motion.h2 
+          <motion.h2
             className="text-4xl font-bold text-white mb-6 hover:text-blue-400 transition-colors duration-300"
             whileHover={{ x: 10 }}
           >
@@ -162,9 +163,10 @@ export default function Portfolio() {
           </motion.h2>
           <p className="text-lg leading-relaxed text-gray-300 hover:text-white transition-colors duration-300">
             Analytical and technically skilled graduate in Computer Science, Statistics and Industrial
-            Mathematics, with hands-on experience building custom Odoo ERP solutions(Python), AI/ML projects, MERN full stack and Java full stack projects.
-            Seeking a role that leverages my analytical thinking, critical thinking, problem-solving,
-            creativity and computational skills to drive innovative solutions in tech, research or industry.
+            Mathematics, with hands-on experience building custom Odoo ERP solutions (Python), AI/ML
+            projects, MERN full stack and Java full stack projects. Seeking a role that leverages my
+            analytical thinking, critical thinking, problem-solving, creativity and computational skills
+            to drive innovative solutions in tech, research or industry.
           </p>
         </motion.section>
 
@@ -177,7 +179,7 @@ export default function Portfolio() {
           variants={fadeInUp}
           className="bg-gradient-to-r from-gray-800 to-gray-900 shadow-xl rounded-2xl p-12 min-h-[90vh] flex flex-col justify-center border border-gray-700 hover:border-green-500 transition-all duration-500"
         >
-          <motion.h2 
+          <motion.h2
             className="text-4xl font-bold text-white mb-12 text-center hover:text-green-400 transition-colors duration-300"
             whileHover={{ scale: 1.1 }}
           >
@@ -185,14 +187,14 @@ export default function Portfolio() {
           </motion.h2>
           <div className="grid md:grid-cols-2 gap-8">
             {[
-              { title: "BSc (General) in Physical Sciences(Computer Science & Statistics)", period: "2022 - 2025", place: "University of Ruhuna" },
+              { title: "BSc (General) in Physical Sciences (Computer Science & Statistics)", period: "2022 - 2025", place: "University of Ruhuna" },
               { title: "Bachelor of Information Technology", period: "2024 - Present", place: "University of Moratuwa" },
               { title: "G.C.E. A/L – Physical Science Stream", period: "2020", place: "Royal College, Colombo 07" },
             ].map((edu, i) => (
-              <motion.div 
-                key={i} 
-                variants={fadeInUp} 
-                custom={i+1} 
+              <motion.div
+                key={i}
+                variants={fadeInUp}
+                custom={i + 1}
                 className="bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-2xl hover:shadow-green-500/50 transition-all duration-300 cursor-pointer border border-transparent hover:border-green-500"
                 whileHover={{ scale: 1.05, y: -10 }}
               >
@@ -218,7 +220,7 @@ export default function Portfolio() {
           variants={fadeInUp}
           className="bg-gradient-to-r from-gray-900 to-gray-800 shadow-2xl rounded-2xl p-12 min-h-[90vh] flex flex-col justify-center border border-gray-700 hover:border-blue-500 transition-all duration-500"
         >
-          <motion.h2 
+          <motion.h2
             className="text-4xl font-bold text-white mb-12 text-center hover:text-blue-400 transition-colors duration-300"
             whileHover={{ scale: 1.1 }}
           >
@@ -263,7 +265,7 @@ export default function Portfolio() {
           variants={fadeInUp}
           className="bg-gradient-to-r from-gray-800 to-black shadow-xl rounded-2xl p-10 min-h-[90vh] flex flex-col justify-center"
         >
-          <motion.h2 
+          <motion.h2
             className="text-4xl font-bold text-white mb-10 hover:text-purple-400 transition-colors duration-300"
             whileHover={{ scale: 1.1 }}
           >
@@ -278,7 +280,7 @@ export default function Portfolio() {
               },
               {
                 title: "Purchase Internal Request – Custom Odoo 19 Module",
-                tech: "Odoo, Python, PostgreSQL, OWL, QWeb Reports, XML ",
+                tech: "Odoo, Python, PostgreSQL, OWL, QWeb Reports, XML",
                 desc: "Built an end-to-end internal purchase requisition system for Odoo 19, letting employees raise requests — even for generic, non-catalog items — that flow through a configurable multi-level approval hierarchy. Automatically checks stock availability at approval time, generating Internal Transfers for in-stock items and one-click RFQs/POs for the rest, with an event-driven state machine tracking the full Draft → Received lifecycle. Cleanly extends Odoo's hr, stock, and purchase apps via inheritance — zero core overrides, fully uninstallable.",
               },
               {
@@ -296,7 +298,6 @@ export default function Portfolio() {
                 tech: "Java, Spring Boot, React.js, Node.js",
                 desc: "Developed a full-stack web application for optimizing and allocating study time periods across university subjects using the Simplex Method in Mathematics, enabling effective scheduling during study leave.",
               },
-      
               {
                 title: "Smart Budget Managing Web Application",
                 tech: "React.js, Express.js, MongoDB, Node.js",
@@ -322,17 +323,16 @@ export default function Portfolio() {
                 tech: "Python, pandas, Flask, Google Calendar API, SMTP",
                 desc: "Designed a 6-stage recruitment automation pipeline — CV screening, candidate contact, interview scheduling, status updates, and offer/rejection dispatch with auto-generated PDF offer letters. Cut interview scheduling time by 73% and reduced multi-hour manual email/reporting tasks to under a minute.",
               },
-              
             ].map((proj, i) => (
-              <motion.div 
-                key={i} 
-                variants={fadeInUp} 
-                custom={i+1}
+              <motion.div
+                key={i}
+                variants={fadeInUp}
+                custom={i + 1}
                 whileHover={{ scale: 1.05, rotate: 1 }}
               >
                 <Card className="bg-gradient-to-br from-gray-800 to-gray-900 shadow-md hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-500 cursor-pointer border border-transparent hover:border-purple-500">
                   <CardContent className="p-8">
-                    <motion.h3 
+                    <motion.h3
                       className="font-bold text-2xl text-white mb-4 hover:text-purple-400 transition-colors duration-300"
                       whileHover={{ x: 5 }}
                     >
@@ -356,16 +356,16 @@ export default function Portfolio() {
           variants={fadeInUp}
           className="bg-gradient-to-r from-gray-900 to-gray-800 shadow-2xl rounded-2xl p-12 min-h-[90vh] flex flex-col justify-center border border-gray-700 hover:border-blue-500 transition-all duration-500"
         >
-          <motion.h2 
+          <motion.h2
             className="text-4xl font-bold text-white mb-12 text-center hover:text-blue-400 transition-colors duration-300"
             whileHover={{ scale: 1.1 }}
           >
             Skills
           </motion.h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-            <motion.div 
-              variants={fadeInUp} 
-              custom={1} 
+            <motion.div
+              variants={fadeInUp}
+              custom={1}
               className="bg-gray-800 rounded-xl p-6 shadow-md hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 cursor-pointer border border-transparent hover:border-blue-500"
               whileHover={{ scale: 1.08, y: -10 }}
             >
@@ -376,9 +376,9 @@ export default function Portfolio() {
               <p className="text-gray-300 hover:text-white transition-colors duration-300">Python, Java, JavaScript, PHP, HTML, XML, CSS, C#, R</p>
             </motion.div>
 
-            <motion.div 
-              variants={fadeInUp} 
-              custom={2} 
+            <motion.div
+              variants={fadeInUp}
+              custom={2}
               className="bg-gray-800 rounded-xl p-6 shadow-md hover:shadow-2xl hover:shadow-green-500/50 transition-all duration-300 cursor-pointer border border-transparent hover:border-green-500"
               whileHover={{ scale: 1.08, y: -10 }}
             >
@@ -389,9 +389,9 @@ export default function Portfolio() {
               <p className="text-gray-300 hover:text-white transition-colors duration-300">Odoo ERP, OWL, React, Node.js</p>
             </motion.div>
 
-            <motion.div 
-              variants={fadeInUp} 
-              custom={3} 
+            <motion.div
+              variants={fadeInUp}
+              custom={3}
               className="bg-gray-800 rounded-xl p-6 shadow-md hover:shadow-2xl hover:shadow-yellow-500/50 transition-all duration-300 cursor-pointer border border-transparent hover:border-yellow-500"
               whileHover={{ scale: 1.08, y: -10 }}
             >
@@ -402,9 +402,9 @@ export default function Portfolio() {
               <p className="text-gray-300 hover:text-white transition-colors duration-300">MySQL, PostgreSQL, MongoDB</p>
             </motion.div>
 
-            <motion.div 
-              variants={fadeInUp} 
-              custom={4} 
+            <motion.div
+              variants={fadeInUp}
+              custom={4}
               className="bg-gray-800 rounded-xl p-6 shadow-md hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 cursor-pointer border border-transparent hover:border-purple-500"
               whileHover={{ scale: 1.08, y: -10 }}
             >
@@ -426,7 +426,7 @@ export default function Portfolio() {
           variants={fadeInUp}
           className="bg-gradient-to-r from-gray-800 to-gray-900 shadow-2xl rounded-2xl p-12 min-h-[70vh] flex flex-col justify-center border border-gray-700 hover:border-orange-500 transition-all duration-500"
         >
-          <motion.h2 
+          <motion.h2
             className="text-4xl font-bold text-white mb-10 text-center hover:text-orange-400 transition-colors duration-300"
             whileHover={{ scale: 1.1 }}
           >
@@ -434,10 +434,10 @@ export default function Portfolio() {
           </motion.h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
             {["Analytical Thinking", "Problem Solving", "Teamwork", "Adaptability", "Attention to Detail", "Time Management"].map((strength, i) => (
-              <motion.div 
-                key={i} 
-                variants={fadeInUp} 
-                custom={i+1} 
+              <motion.div
+                key={i}
+                variants={fadeInUp}
+                custom={i + 1}
                 className="bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-2xl hover:shadow-orange-500/50 transition-all duration-300 cursor-pointer border border-transparent hover:border-orange-500"
                 whileHover={{ scale: 1.1, rotate: 2, y: -10 }}
               >
@@ -459,7 +459,7 @@ export default function Portfolio() {
           variants={fadeInUp}
           className="bg-gray-900 shadow-xl rounded-2xl p-12 min-h-[90vh] flex flex-col justify-center border border-gray-700 hover:border-blue-500 transition-all duration-500"
         >
-          <motion.h2 
+          <motion.h2
             className="text-4xl font-bold text-white mb-12 text-center hover:text-blue-400 transition-colors duration-300"
             whileHover={{ scale: 1.1 }}
           >
@@ -472,10 +472,10 @@ export default function Portfolio() {
               { title: "Programming in Python", issuer: "University of Moratuwa" },
               { title: "Introduction to Data Science", issuer: "University of Moratuwa" },
             ].map((cert, i) => (
-              <motion.div 
-                key={i} 
-                variants={fadeInUp} 
-                custom={i+1} 
+              <motion.div
+                key={i}
+                variants={fadeInUp}
+                custom={i + 1}
                 className="bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 cursor-pointer border border-transparent hover:border-blue-500"
                 whileHover={{ scale: 1.05, y: -10 }}
               >
@@ -500,65 +500,65 @@ export default function Portfolio() {
           variants={fadeInUp}
           className="bg-gradient-to-r from-gray-800 to-gray-900 shadow-xl rounded-2xl p-10 min-h-[90vh] flex flex-col justify-center hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-500"
         >
-          <motion.h2 
+          <motion.h2
             className="text-4xl font-bold text-white mb-8 hover:text-blue-400 transition-colors duration-300"
             whileHover={{ scale: 1.1 }}
           >
             Contact
           </motion.h2>
           <div className="space-y-6 text-xl text-gray-300">
-            <motion.p 
-              variants={fadeInUp} 
-              custom={1} 
+            <motion.p
+              variants={fadeInUp}
+              custom={1}
               className="flex items-center gap-3 hover:text-white hover:translate-x-2 transition-all duration-300 cursor-pointer"
               whileHover={{ scale: 1.05 }}
             >
               <motion.div whileHover={{ rotate: 360 }} transition={{ duration: 0.5 }}>
-                <Phone size={24} className="text-gray-400 hover:text-blue-400 transition-colors"/>
+                <Phone size={24} className="text-gray-400 hover:text-blue-400 transition-colors" />
               </motion.div>
               0767589462
             </motion.p>
-            <motion.p 
-              variants={fadeInUp} 
-              custom={2} 
+            <motion.p
+              variants={fadeInUp}
+              custom={2}
               className="flex items-center gap-3 hover:text-white hover:translate-x-2 transition-all duration-300 cursor-pointer"
               whileHover={{ scale: 1.05 }}
             >
               <motion.div whileHover={{ rotate: 360 }} transition={{ duration: 0.5 }}>
-                <Mail size={24} className="text-gray-400 hover:text-blue-400 transition-colors"/>
+                <Mail size={24} className="text-gray-400 hover:text-blue-400 transition-colors" />
               </motion.div>
               dasun.darshaka01@gmail.com
             </motion.p>
-            <motion.p 
-              variants={fadeInUp} 
-              custom={3} 
+            <motion.p
+              variants={fadeInUp}
+              custom={3}
               className="flex items-center gap-3 hover:text-white hover:translate-x-2 transition-all duration-300 cursor-pointer"
               whileHover={{ scale: 1.05 }}
             >
               <motion.div whileHover={{ rotate: 360 }} transition={{ duration: 0.5 }}>
-                <MapPin size={24} className="text-gray-400 hover:text-blue-400 transition-colors"/>
+                <MapPin size={24} className="text-gray-400 hover:text-blue-400 transition-colors" />
               </motion.div>
               278, Horana Road, Pamunugama, Alubomulla
             </motion.p>
-            <motion.p 
-              variants={fadeInUp} 
-              custom={4} 
+            <motion.p
+              variants={fadeInUp}
+              custom={4}
               className="flex items-center gap-3 hover:text-white hover:translate-x-2 transition-all duration-300"
               whileHover={{ scale: 1.05 }}
             >
               <motion.div whileHover={{ rotate: 360 }} transition={{ duration: 0.5 }}>
-                <Linkedin size={24} className="text-gray-400 hover:text-blue-400 transition-colors"/>
+                <Linkedin size={24} className="text-gray-400 hover:text-blue-400 transition-colors" />
               </motion.div>
               <a className="text-blue-400 hover:underline hover:text-blue-300 transition-colors duration-300" href="https://www.linkedin.com/in/dasundarshaka">linkedin.com/in/dasundarshaka</a>
             </motion.p>
-            <motion.p 
-              variants={fadeInUp} 
-              custom={5} 
+            <motion.p
+              variants={fadeInUp}
+              custom={5}
               className="flex items-center gap-3 hover:text-white hover:translate-x-2 transition-all duration-300"
               whileHover={{ scale: 1.05 }}
             >
               <motion.div whileHover={{ rotate: 360 }} transition={{ duration: 0.5 }}>
-                <Github size={24} className="text-gray-400 hover:text-blue-400 transition-colors"/>
+                <Github size={24} className="text-gray-400 hover:text-blue-400 transition-colors" />
               </motion.div>
               <a className="text-blue-400 hover:underline hover:text-blue-300 transition-colors duration-300" href="https://github.com/dasundarshaka">github.com/dasundarshaka</a>
             </motion.p>
@@ -573,7 +573,7 @@ export default function Portfolio() {
         transition={{ duration: 1 }}
         className="bg-gradient-to-r from-black to-gray-900 text-white text-center py-10 mt-20 shadow-inner hover:bg-gradient-to-r hover:from-gray-900 hover:to-black transition-all duration-500"
       >
-        <motion.p 
+        <motion.p
           className="text-lg hover:text-blue-400 transition-colors duration-300 cursor-default"
           whileHover={{ scale: 1.05 }}
         >
