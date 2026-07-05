@@ -162,7 +162,7 @@ export default function Portfolio() {
             About Me
           </motion.h2>
           <p className="text-lg leading-relaxed text-gray-300 hover:text-white transition-colors duration-300">
-            Results driven Software Engineer with practical experience developing custom Odoo ERP solutions, AI/ML-powered prediction platforms, and full-stack web applications using MERN and Java. Background in Computer Science, Statistics, Statistics and Industrial Mathematics, with a strong focus on problem-solving, automation, and delivering scalable, production-ready systems. Always eager to apply analytical thinking and technical skills to drive innovative solutions.
+            Results driven Software Engineer with practical experience developing custom Odoo ERP solutions, AI/ML-powered prediction platforms, and full-stack web applications using MERN and Java. Background in Computer Science, Statistics and Industrial Mathematics, with a strong focus on problem-solving, automation, and delivering scalable, production-ready systems. Always eager to apply analytical thinking and technical skills to drive innovative solutions.
           </p>
         </motion.section>
 
