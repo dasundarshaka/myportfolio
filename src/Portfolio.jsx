@@ -41,23 +41,37 @@ export default function Portfolio() {
   ];
 
   const experience = [
-    {
-      role: "Odoo Software Engineer Intern",
-      company: "Beaver Hub (Pvt) Ltd",
-      period: "Jan 2026 - July",
-      points: [
-        "Contributed to Sewdoo, the company's proprietary Odoo ERP product built for the apparel manufacturing industry, developing custom features tailored to industry-specific workflows.",
-        "Developed and enhanced features for an Odoo-based ERP solution serving the hotel industry, translating hospitality operations into functional technical modules.",
-        "Designed and built a custom Odoo module for a Library Management System end-to-end, covering functional design, backend logic, and ORM-based data modeling.",
-        "Engineered custom Odoo modules using Python, PostgreSQL, XML, and the Odoo ORM, extending core ERP functionality to meet business-specific requirements.",
-        "Integrated external systems via APIs, enabling seamless data exchange between Odoo and third-party applications.",
-        "Conducted business process analysis and workflow automation, translating client requirements into scalable ERP solutions.",
-        "Built strong functional and technical expertise across Odoo core modules (Sales, Purchase, Inventory, Manufacturing), supporting end-to-end ERP implementation.",
-        "Supported development of a client-facing Odoo demo environment for a new industry vertical, collaborating with senior developers through design, development, and testing.",
-      ],
-    },
-  ];
-
+  {
+    role: "Odoo Software Engineer Intern",
+    company: "Beaver Hub (Pvt) Ltd",
+    period: "Jan 2026 - July",
+    points: [
+      "Contributed to Sewdoo, the company's proprietary Odoo ERP product built for the apparel manufacturing industry, developing custom features tailored to industry-specific workflows.",
+      "Developed and enhanced features for an Odoo-based ERP solution serving the hotel industry, translating hospitality operations into functional technical modules.",
+      "Designed and built a custom Odoo module for a Library Management System end-to-end, covering functional design, backend logic, and ORM-based data modeling.",
+      "Engineered custom Odoo modules using Python, PostgreSQL, XML, and the Odoo ORM, extending core ERP functionality to meet business-specific requirements.",
+      "Integrated external systems via APIs, enabling seamless data exchange between Odoo and third-party applications.",
+      "Conducted business process analysis and workflow automation, translating client requirements into scalable ERP solutions.",
+      "Built strong functional and technical expertise across Odoo core modules (Sales, Purchase, Inventory, Manufacturing), supporting end-to-end ERP implementation.",
+      "Supported development of a client-facing Odoo demo environment for a new industry vertical, collaborating with senior developers through design, development, and testing.",
+    ],
+  },
+  {
+    role: "Data Science Intern",
+    company: "Gamage Recruiters Pvt Ltd, Sri Lanka",
+    period: "Dec 2025 - June 2026",
+    points: [
+      "Built and deployed a production-grade real-time AI prediction platform with an automated MLOps pipeline, covering drift-triggered auto-retraining, model versioning, and CI/CD-driven deployment.",
+      "Engineered and trained machine learning classification models (Logistic Regression, Decision Tree) with SMOTE-based class balancing, achieving 82% accuracy for predictive lead scoring.",
+      "Applied NLP techniques (TF-IDF vectorization, cosine similarity, text preprocessing) to build automated candidate-to-job matching and ranking systems.",
+      "Designed and implemented a composite scoring algorithm combining multiple weighted business metrics to automate lead/candidate prioritization.",
+      "Automated multi-stage business workflows (candidate screening, scheduling, status updates, and communications), reducing manual processing time by over 70% in real-world use cases.",
+      "Integrated third-party APIs (Google Calendar, email/SMTP services) to enable end-to-end process automation beyond core ML logic.",
+      "Built interactive dashboards (Streamlit) and full-stack web applications (Flask) to deliver real-time predictions, analytics, and reporting to end users.",
+      "Containerized and monitored ML systems using Docker, Prometheus, and Grafana, applying MLOps best practices for production reliability.",
+    ],
+  },
+];
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -148,7 +162,7 @@ export default function Portfolio() {
           </motion.h2>
           <p className="text-lg leading-relaxed text-gray-300 hover:text-white transition-colors duration-300">
             Analytical and technically skilled graduate in Computer Science, Statistics and Industrial
-            Mathematics, with hands-on experience building custom Odoo ERP solutions and other full stack projects.
+            Mathematics, with hands-on experience building custom Odoo ERP solutions(Python), AI/ML projects, MERN full stack and Java full stack projects.
             Seeking a role that leverages my analytical thinking, critical thinking, problem-solving,
             creativity and computational skills to drive innovative solutions in tech, research or industry.
           </p>
@@ -287,6 +301,26 @@ export default function Portfolio() {
                 title: "Smart Budget Managing Web Application",
                 tech: "React.js, Express.js, MongoDB, Node.js",
                 desc: "Built a full-stack MERN Expense Tracker Web using OOP and DSA (sorting, hash maps) for efficient expense categorization and analytics, with REST APIs and a React dashboard.",
+              },
+              {
+                title: "Real-Time AI Prediction Platform with Automated MLOps Pipeline",
+                tech: "FastAPI, scikit-learn, Docker, Prometheus, Grafana, MLflow, GitHub Actions",
+                desc: "Built a production-grade MLOps platform delivering real-time and batch ML predictions with automated drift detection and self-retraining. Implements PSI/KS-based drift monitoring, a versioned model registry with auto-promotion, and a full observability stack (Prometheus + Grafana), all wrapped in a 7-stage CI/CD pipeline with multi-stage Docker builds and blue-green deployment.",
+              },
+              {
+                title: "Sales Lead Scoring System",
+                tech: "Python, scikit-learn, SMOTE, Streamlit, Plotly",
+                desc: "Built an ML-powered lead prioritization system for a real sales team, using Logistic Regression (82% accuracy, 0.81 ROC-AUC) with SMOTE-balanced training and 6 engineered features to compute a weighted composite score. Automatically classifies leads into High/Medium/Low priority tiers, delivered via an interactive Streamlit dashboard with real-time scoring, funnel analysis, and automated reporting.",
+              },
+              {
+                title: "Candidate Recommendation System",
+                tech: "Python, Flask, scikit-learn, NLTK",
+                desc: "Built a full-stack candidate-matching engine using TF-IDF vectorization and cosine similarity to rank CVs against job descriptions by relevance. Supports manual entry, CSV batch uploads, and JSON API integration, with NLTK-based preprocessing and automated PDF report generation for hiring decisions.",
+              },
+              {
+                title: "Recruitment Workflow Automation Suite",
+                tech: "Python, pandas, Flask, Google Calendar API, SMTP",
+                desc: "Designed a 6-stage recruitment automation pipeline — CV screening, candidate contact, interview scheduling, status updates, and offer/rejection dispatch with auto-generated PDF offer letters. Cut interview scheduling time by 73% and reduced multi-hour manual email/reporting tasks to under a minute.",
               },
               
             ].map((proj, i) => (
